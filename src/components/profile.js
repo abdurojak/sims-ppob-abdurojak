@@ -4,7 +4,7 @@ import { fetchProfile } from "../redux/profileSlice";
 
 function Profile() {
     const dispatch = useDispatch();
-    const { first_name, last_name, email, profile_image, status, message } = useSelector((state) => state.profile);
+    const { first_name, last_name, profile_image, status, message } = useSelector((state) => state.profile);
 
     useEffect(() => {
         dispatch(fetchProfile());
