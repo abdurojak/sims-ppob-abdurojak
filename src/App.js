@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import RegisterPage from "./pages/registerPage";
 import LoginForm from "./components/loginForm";

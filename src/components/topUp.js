@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { topUp, resetTopUpState } from "../redux/topupSlice";
+import { topUp } from "../redux/topupSlice";
 
 function TopUp() {
     const dispatch = useDispatch();
