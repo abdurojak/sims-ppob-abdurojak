@@ -4,7 +4,7 @@ import { topUp } from "../redux/topupSlice";
 
 function TopUp() {
     const dispatch = useDispatch();
-    const { status, message, data } = useSelector((state) => state.topUp);
+    const { status } = useSelector((state) => state.topUp);
     const [amount, setAmount] = useState("");
     const [showConfirmModal, setShowConfirmModal] = useState(false);
 
