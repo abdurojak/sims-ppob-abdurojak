@@ -25,13 +25,11 @@ function TopMenu({ activePage }) {
             zIndex: 1000,
             borderBottom: "0.5px solid #D3D3D3"
         }}>
-            {/* Logo */}
             <Link to="/home" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", color: "black" }}>
                 <img src="/assets/Logo.png" alt="SIMS PPOB Logo" width="40" height="40" />
                 <h1 style={{ fontSize: "20px", margin: 0 }}>SIMS PPOB</h1>
             </Link>
 
-            {/* Menu */}
             {isMobile ? (
                 <div style={{ position: "relative" }}>
                     <button
@@ -68,7 +66,6 @@ function TopMenu({ activePage }) {
     );
 }
 
-// Fungsi untuk menentukan style menu
 const menuStyle = (isActive) => ({
     textDecoration: "none",
     color: isActive ? "red" : "black",

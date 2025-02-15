@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const topUp = createAsyncThunk("topUp/topUpAmount", async (amount, { getState, rejectWithValue }) => {
-    const token = getState().auth.token; // Ambil token dari Redux state
+    const token = getState().auth.token;
     if (!token) return rejectWithValue("Token tidak tersedia");
 
     try {

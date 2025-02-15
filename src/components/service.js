@@ -16,7 +16,7 @@ function Services() {
     if (status === "error") return <p style={{ color: "red" }}>{message}</p>;
 
     const handleServiceClick = (service) => {
-        navigate(`/payment`, { state: service }); // Kirim data service sebagai state
+        navigate(`/payment`, { state: service });
     };
 
     return (

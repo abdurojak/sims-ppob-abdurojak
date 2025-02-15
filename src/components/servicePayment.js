@@ -47,7 +47,6 @@ function ServicePayment({ service }) {
                 Bayar
             </button>
 
-            {/* Modal Konfirmasi */}
             {showConfirmModal && (
                 <div
                     style={{

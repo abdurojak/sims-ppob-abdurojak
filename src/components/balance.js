@@ -6,7 +6,7 @@ function Balance() {
     const dispatch = useDispatch();
     const balanceState = useSelector((state) => state.balance) || {};
     const { balance = 0, status, message } = balanceState;
-    const [showBalance, setShowBalance] = useState(false); // 🔹 State untuk kontrol tampilan saldo
+    const [showBalance, setShowBalance] = useState(false);
 
     useEffect(() => {
         dispatch(fetchBalance());

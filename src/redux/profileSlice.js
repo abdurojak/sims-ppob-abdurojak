@@ -69,7 +69,7 @@ export const updateProfileImage = createAsyncThunk(
             const result = await response.json();
 
             if (result.status === 0) {
-                return result.data.profile_image; // Ambil URL gambar terbaru
+                return result.data.profile_image;
             } else {
                 return rejectWithValue(result.message);
             }
