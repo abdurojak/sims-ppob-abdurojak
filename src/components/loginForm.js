@@ -56,6 +56,8 @@ function LoginForm() {
                     <h1 style={{ fontSize: "20px", margin: 0 }}>SIMS PPOB</h1>
                 </div>
                 {message && <p style={{ color: status === "success" ? "green" : "red" }}>{message}</p>}
+                <h3>Masuk atau buat akun
+                    untuk memulai</h3>
                 <form onSubmit={handleSubmit} style={{ width: "100%", maxWidth: "300px" }}>
                     <input
                         type="email"
@@ -84,7 +86,7 @@ function LoginForm() {
                     </button>
                 </form>
                 <p style={{ marginTop: "10px" }}>
-                    Belum punya akun? registrasi<Link to="/register" style={{ color: "red", textDecoration: "none", fontWeight: "bold" }}> disini</Link>
+                    Belum punya akun? registrasi<Link to="/register" style={{ color: "red", textDecoration: "none", fontWeight: "bold" }}> di sini</Link>
                 </p>
             </div>
             <div style={{ width: "50%" }}>

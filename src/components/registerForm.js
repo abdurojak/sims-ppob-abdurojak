@@ -52,7 +52,7 @@ function RegisterForm() {
                 </div>
 
                 {message && <p style={{ color: status === "success" ? "green" : "red", textAlign: "center" }}>{message}</p>}
-
+                <h3>Lengkapi data untuk membuat akun</h3>
                 <form onSubmit={handleSubmit} style={{ width: "100%", maxWidth: "300px" }}>
                     <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required style={inputStyle} />
                     <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required style={inputStyle} />

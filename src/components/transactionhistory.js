@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTransactionHistory } from "../redux/transactionHistorySlice";
+import { fetchTransactionHistory, resetTransactionHistory } from "../redux/transactionHistorySlice";
 
 function TransactionHistory() {
     const dispatch = useDispatch();
     const { records, offset, limit, status, message } = useSelector((state) => state.transactionHistory);
 
     useEffect(() => {
+        dispatch(resetTransactionHistory());
         dispatch(fetchTransactionHistory({ offset: 0, limit: 5 }));
     }, [dispatch]);
 

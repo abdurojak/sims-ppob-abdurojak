@@ -14,6 +14,7 @@ export const fetchProfile = createAsyncThunk("profile/fetchProfile", async (_, {
 
         const result = await response.json();
         if (result.status === 0) {
+            console.log(result.data)
             return result.data;
         } else {
             return rejectWithValue(result.message);

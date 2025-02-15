@@ -45,6 +45,10 @@ const transactionSlice = createSlice({
             state.status = "idle";
             state.error = null;
         },
+        resetTransactionHistory: (state) => {
+            state.records = [];
+            state.offset = 0;
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -63,5 +67,5 @@ const transactionSlice = createSlice({
     },
 });
 
-export const { resetTransactionState } = transactionSlice.actions;
+export const { resetTransactionState, resetTransactionHistory } = transactionSlice.actions;
 export default transactionSlice.reducer;

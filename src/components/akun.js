@@ -99,7 +99,7 @@ function Akun() {
                 <>
                     <div style={{ position: "relative", display: "inline-block" }}>
                         <img
-                            src={profile_image || "/default-profile.png"}
+                            src={(profile_image && profile_image !== "https://minio.nutech-integrasi.com/take-home-test/null" ? profile_image : 'assets/ProfilePhoto.png') || "/default-profile.png"}
                             alt="Profile"
                             style={{ width: "100px", height: "100px", borderRadius: "50%", cursor: "pointer" }}
                             onClick={handleImageClick}
