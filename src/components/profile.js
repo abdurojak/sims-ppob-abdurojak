@@ -8,7 +8,6 @@ function Profile() {
 
     useEffect(() => {
         dispatch(fetchProfile());
-        console.log(profile_image)
     }, [dispatch]);
 
     if (status === "loading") return <p>Loading profile...</p>;
