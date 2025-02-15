@@ -8,6 +8,7 @@ import bannerReducer from "../redux/bannerSlice";
 import serviceReducer from "../redux/serviceSlice";
 import topUpReducer from "../redux/topupSlice";
 import transactionHistoryReducer from "../redux/transactionHistorySlice";
+import transactionReducer from "../redux/transactionSlice";
 
 export const store = configureStore({
     reducer: {
@@ -20,5 +21,6 @@ export const store = configureStore({
         service: serviceReducer,
         topUp: topUpReducer,
         transactionHistory: transactionHistoryReducer,
+        transaction: transactionReducer
     },
 });

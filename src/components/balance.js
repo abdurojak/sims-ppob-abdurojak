@@ -15,7 +15,8 @@ function Balance() {
     return (
         <div
             style={{
-                backgroundImage: "url('/assets/Background Saldo.png')",
+                backgroundImage: `url(assets/BackgroundSaldo.png)`,
+                backgroundColor: "red",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 padding: "20px",

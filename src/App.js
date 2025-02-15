@@ -6,6 +6,7 @@ import Home from "./pages/homePage";
 import TopUp from "./pages/topupPage";
 import Transaction from "./pages/transactionPage";
 import Akun from "./pages/akunPage";
+import Payment from "./pages/paymentPage";
 
 function App() {
   const token = useSelector((state) => state.auth.token);
@@ -18,6 +19,7 @@ function App() {
         <Route path="/topup" element={token ? <TopUp /> : <Navigate to="/login" />} />
         <Route path="/transaction" element={token ? <Transaction /> : <Navigate to="/login" />} />
         <Route path="/account" element={token ? <Akun /> : <Navigate to="/login" />} />
+        <Route path="/payment" element={token ? <Payment /> : <Navigate to="/login" />} />
         <Route path="*" element={<Navigate to={token ? "/home" : "/login"} />} />
       </Routes>
     </Router>

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updateField, resetForm } from "../redux/registerSlice";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function RegisterForm() {
     const dispatch = useDispatch();
@@ -44,18 +44,55 @@ function RegisterForm() {
     };
 
     return (
-        <div>
-            {message && <p style={{ color: status === "success" ? "green" : "red" }}>{message}</p>}
-            <form onSubmit={handleSubmit}>
-                <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-                <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required />
-                <input type="text" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required />
-                <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
-                <button type="submit" disabled={status === "loading"}>Register</button>
-                <button type="button" onClick={() => dispatch(resetForm())}>Reset</button>
-            </form>
+        <div style={{ display: "flex", height: "100vh", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ width: "50%", padding: "40px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px" }}>
+                    <img src="/assets/Logo.png" alt="SIMS PPOB Logo" width="40" height="40" />
+                    <h1 style={{ fontSize: "20px", margin: 0 }}>SIMS PPOB</h1>
+                </div>
+
+                {message && <p style={{ color: status === "success" ? "green" : "red", textAlign: "center" }}>{message}</p>}
+
+                <form onSubmit={handleSubmit} style={{ width: "100%", maxWidth: "300px" }}>
+                    <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required style={inputStyle} />
+                    <input type="text" name="first_name" placeholder="First Name" value={formData.first_name} onChange={handleChange} required style={inputStyle} />
+                    <input type="text" name="last_name" placeholder="Last Name" value={formData.last_name} onChange={handleChange} required style={inputStyle} />
+                    <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required style={inputStyle} />
+
+                    <button type="submit" disabled={status === "loading"} style={buttonStyle}>
+                        Registrasi
+                    </button>
+                </form>
+
+                <p style={{ marginTop: "10px", textAlign: "center" }}>
+                    Sudah punya akun? login <Link to="/login" style={{ color: "red", textDecoration: "none", fontWeight: "bold" }}>di sini</Link>
+                </p>
+            </div>
+            <div style={{ width: "50%" }}>
+                <img src="/assets/IllustrasiLogin.png" alt="Register Illustration" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
         </div>
     );
 }
+
+const inputStyle = {
+    width: "94%",
+    padding: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
+    marginBottom: "10px"
+};
+
+const buttonStyle = {
+    width: "100%",
+    padding: "10px",
+    backgroundColor: "red",
+    color: "white",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+    marginTop: "10px",
+    fontWeight: "bold",
+};
 
 export default RegisterForm;

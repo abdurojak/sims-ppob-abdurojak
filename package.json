@@ -2,6 +2,7 @@
   "name": "sims-ppob-abdurojak",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://take-home-test-api.nutech-integrasi.com",
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
     "cra-template": "1.2.0",
